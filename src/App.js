@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Navbar from './components/Navbar'
+import Routes from './routes'
+
 const App = () => (
   <div className="app-container">
-    <header className="app-container__header">
-      <h1>Pirate here</h1>
-    </header>
+    <Navbar />
+    <Routes />
   </div>
 )
 

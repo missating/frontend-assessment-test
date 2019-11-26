@@ -1,0 +1,17 @@
+.navbar-container {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  cursor: pointer;
+
+  &__content {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+
+  .navbar-brand {
+    color: #D26C73;
+    font-weight: bold;
+  }
+}
