@@ -1,0 +1,36 @@
+.starrating-container {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__star {
+    cursor: pointer;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--brand-color);
+    -webkit-clip-path: polygon(
+      50% 0%,
+      63% 38%,
+      100% 38%,
+      69% 59%,
+      82% 100%,
+      50% 75%,
+      18% 100%,
+      31% 59%,
+      0% 38%,
+      37% 38%
+    );
+    clip-path: polygon(
+      50% 0%,
+      63% 38%,
+      100% 38%,
+      69% 59%,
+      82% 100%,
+      50% 75%,
+      18% 100%,
+      31% 59%,
+      0% 38%,
+      37% 38%
+    );
+  }
+}

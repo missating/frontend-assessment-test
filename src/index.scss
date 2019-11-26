@@ -1,5 +1,6 @@
 :root {
   font-size: calc(6px + 2vmin);
+  --brand-color: #D26C73;
 }
 
 body {
@@ -9,4 +10,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EFEFEF;
 }
