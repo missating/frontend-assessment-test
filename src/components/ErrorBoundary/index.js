@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './ErrorBoundary.scss'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -12,18 +13,30 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
-    console.log(error, errorInfo);
-  }
-
   render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+    const {
+      state: {
+        hasError,
+      },
+      props: {
+        children,
+      },
+    } = this;
+    if (hasError) {
+      return (
+        <div className="errorboundary-container">
+          <div className="errorboundary-container__content">
+            <h1>500</h1>
+            <p>Internal server error</p>
+            <p>We are working on creating something better...</p>
+            <button type="button" onClick={() => window.location.reload()}>Refresh</button>
+          </div>
+
+        </div>
+      )
     }
 
-    return this.props.children;
+    return children;
   }
 }
 

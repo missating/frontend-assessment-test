@@ -1,0 +1,41 @@
+.errorboundary-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem;
+
+  &__content {
+    background-color: #ffffff;
+    width: 600px;
+    padding: 10px;
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.7rem;
+      font-style: oblique;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 0.2rem 1rem;
+      background: #fff;
+      border: 1px solid var(--brand-color);
+      font-size: 0.5rem;
+      color: rgb(30, 29, 34);
+      outline: none;
+      transition: background 250ms ease-in-out, transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &:hover {
+        background: var(--brand-color);
+        color: #fff;
+      }
+    }
+  }
+
+}

@@ -6,7 +6,7 @@ import './HotelList.scss'
 const API_URL = 'http://fake-hotel-api.herokuapp.com/api/hotels'
 
 const HotelList = () => {
-  const [hotels, setHotels] = useState({});
+  const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
     fetch(`${API_URL}?count=10`)
@@ -15,23 +15,34 @@ const HotelList = () => {
         setHotels(response)
         console.log(response)
       })
-      .catch((error) => console.log(error))
+      .catch((error) => {
+        throw error
+      })
   }, [])
 
 
   return (
     <div className="hotellist-container">
       {
-        Object.entries(hotels).map(([key, value]) => (
-          <HotelCard
-            key={value.id}
-            image={value.images[0]}
-            name={value.name}
-            description={value.description}
-            price={value.price}
-            star={value.stars}
-          />
-        ))
+        hotels && hotels.map((data) => {
+          const extractStartDate = new Date(data.date_start).toDateString()
+          const extractEndDate = new Date(data.date_end).toDateString()
+          return (
+            <HotelCard
+              hotelId={data.id}
+              key={data.id}
+              image={data.images[0]}
+              name={data.name}
+              description={data.description}
+              price={data.price}
+              star={data.stars}
+              city={data.city}
+              country={data.country}
+              start={extractStartDate}
+              end={extractEndDate}
+            />
+          )
+        })
       }
     </div>
   )
