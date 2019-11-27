@@ -1,7 +1,12 @@
+// thired party libraries
 import React, { useState, useEffect, memo } from 'react'
+import PropTypes from 'prop-types';
+
+// components
 import StarRating from '../StarRating'
 import Reviews from '../Reviews'
 
+// styles
 import './HotelCard.scss'
 
 const API_URL = 'http://fake-hotel-api.herokuapp.com/api/reviews'
@@ -91,7 +96,8 @@ const HotelCard = ({
           showReview
             ? (
               <Reviews
-                key={data.index}
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
                 name={data.name}
                 comment={data.comment}
                 positive={data.positive}
@@ -106,3 +112,16 @@ const HotelCard = ({
 
 
 export default memo(HotelCard)
+
+HotelCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  star: PropTypes.number.isRequired,
+  hotelId: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+}

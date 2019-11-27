@@ -1,5 +1,7 @@
+// thired part libraries
 import React from 'react';
 
+// styles
 import './Navbar.scss'
 
 const NavBar = () => (

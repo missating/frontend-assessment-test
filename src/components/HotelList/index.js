@@ -1,6 +1,10 @@
+// third party libraries
 import React, { useEffect, useState } from 'react';
+
+// components
 import HotelCard from '../HotelCard'
 
+// styles
 import './HotelList.scss'
 
 const API_URL = 'http://fake-hotel-api.herokuapp.com/api/hotels'

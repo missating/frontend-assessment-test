@@ -1,5 +1,8 @@
-import React from 'react'
+// thired party libraries
+import React, { memo } from 'react'
+import PropTypes from 'prop-types';
 
+// styles
 import './Reviews.scss'
 
 const Reviews = ({ name, comment, positive }) => (
@@ -16,4 +19,10 @@ const Reviews = ({ name, comment, positive }) => (
   </article>
 )
 
-export default Reviews;
+export default memo(Reviews);
+
+Reviews.propTypes = {
+  name: PropTypes.string.isRequired,
+  comment: PropTypes.string.isRequired,
+  positive: PropTypes.bool.isRequired,
+}

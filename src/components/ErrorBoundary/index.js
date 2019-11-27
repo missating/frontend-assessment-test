@@ -1,5 +1,8 @@
+// third party libraries
 import React from 'react'
+import PropTypes from 'prop-types';
 
+// styles
 import './ErrorBoundary.scss'
 
 class ErrorBoundary extends React.Component {
@@ -8,6 +11,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
+  // eslint-disable-next-line no-unused-vars
   static getDerivedStateFromError(error) {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
@@ -41,3 +45,7 @@ class ErrorBoundary extends React.Component {
 }
 
 export default ErrorBoundary
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
+}
