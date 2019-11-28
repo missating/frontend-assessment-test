@@ -13,7 +13,7 @@ const Reviews = ({ name, comment, positive }) => (
       <span>
         Positive:
         {' '}
-        {positive}
+        {String(positive)}
       </span>
     </div>
   </article>
