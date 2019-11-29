@@ -8,10 +8,12 @@ const fetchHotels = async (minStars, maxPrice) => {
   return hotels
 }
 
+
 const fetchReview = async (id) => {
   const reviews = await (await fetch(`${API_URL_REVIEWS}?hotel_id=${id}`)).json()
   return reviews
 }
+
 
 export default {
   fetchHotels,

@@ -7,7 +7,7 @@ import './Navbar.scss'
 const NavBar = () => (
   <header className="navbar-container">
     <nav className="navbar-container__content">
-      <a className="navbar-brand" to="/">
+      <a className="navbar-brand" href="/">
         Holiday Pirates
       </a>
     </nav>

@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 // third party libraries
 import React, { useEffect, useState } from 'react';
 

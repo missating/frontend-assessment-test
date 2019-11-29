@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-// oages
+// pages
 import Home from './index'
 
 describe('HotelList Component', () => {

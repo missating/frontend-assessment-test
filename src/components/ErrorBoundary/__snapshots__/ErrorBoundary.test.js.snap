@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorBoundary Component should be rendered properly 1`] = `"<OtherComponent/>"`;
+exports[`ErrorBoundary Component should be rendered properly 1`] = `
+<ErrorBoundary>
+  &lt;OtherComponent/&gt;
+</ErrorBoundary>
+`;

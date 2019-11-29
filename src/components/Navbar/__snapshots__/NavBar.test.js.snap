@@ -9,7 +9,7 @@ exports[`NavBar Component should be rendered properly 1`] = `
   >
     <a
       className="navbar-brand"
-      to="/"
+      href="/"
     >
       Holiday Pirates
     </a>
