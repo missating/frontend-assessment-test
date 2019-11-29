@@ -1,5 +1,6 @@
 // third party libraries
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 // styless
@@ -16,3 +17,9 @@ const NotFound = ({ history }) => (
 );
 
 export default withRouter(NotFound);
+
+NotFound.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+}
