@@ -20,7 +20,7 @@ ____
 
 Optional: Did you miss something in our hotel API? Something that is really needed or you think is important to have before starting with the design or frontend? Please write down your thoughts in a simple list with short statements that we can discuss these point together later.
 
-- Pagination: Since is possible for the API to return 500 hotels, pagination is important for better handling of response data the front end
+- Pagination: Since its possible for the API to return 500 hotels, pagination is important for better handling of response data on the front end
 - Error documentationn: I think errors shouldn't be passed from the front end as query parameters, errors should come from the backend with a descriptive message so it can be handled properly on the front end.
 
 ## Test
@@ -78,7 +78,7 @@ JSON data
                     "flightSchedule": [
                       {
                         "departingAt":"2018-11-19T07:20:00-0800",
-                        "departingAt": "2018-11-19T07:20:00-0900"
+                        "arrivingAt": "2018-11-19T07:20:00-0900"
                   }
                   ],
                 }
