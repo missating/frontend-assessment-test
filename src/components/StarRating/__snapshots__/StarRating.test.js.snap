@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarRating Component should be rendered properly 1`] = `
+<div
+  className="starrating-container"
+>
+  <div
+    className="starrating-container__star"
+    key="0"
+  />
+  <div
+    className="starrating-container__star"
+    key="1"
+  />
+  <div
+    className="starrating-container__star"
+    key="2"
+  />
+</div>
+`;

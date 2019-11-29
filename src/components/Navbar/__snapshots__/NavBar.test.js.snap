@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component should be rendered properly 1`] = `
+<header
+  className="navbar-container"
+>
+  <nav
+    className="navbar-container__content"
+  >
+    <a
+      className="navbar-brand"
+      to="/"
+    >
+      Holiday Pirates
+    </a>
+  </nav>
+</header>
+`;

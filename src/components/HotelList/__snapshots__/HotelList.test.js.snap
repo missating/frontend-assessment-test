@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelList Component should be rendered properly 1`] = `
+<div
+  className="hotellist-container"
+>
+  <div
+    className="hotellist-container__content"
+  >
+    <select
+      className="hotellist-container__content-select"
+      name="select-box"
+      onChange={[Function]}
+      value={3}
+    >
+      <option>
+        1
+      </option>
+      <option>
+        2
+      </option>
+      <option>
+        3
+      </option>
+      <option>
+        4
+      </option>
+      <option>
+        5
+      </option>
+    </select>
+    <input
+      className="hotellist-container__content-input"
+      onChange={[Function]}
+      placeholder="Filter By Price"
+      type="number"
+    />
+  </div>
+</div>
+`;

@@ -1,15 +1,14 @@
 // thired party libraries
-import React, { useState, useEffect, memo } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
 
 // components
 import StarRating from '../StarRating'
 import Reviews from '../Reviews'
+import api from '../../api';
 
 // styles
 import './HotelCard.scss'
-
-const API_URL = 'http://fake-hotel-api.herokuapp.com/api/reviews'
 
 const HotelCard = ({
   image, name, description, price, star, hotelId, city, country, start, end,
@@ -18,12 +17,14 @@ const HotelCard = ({
   const [reviews, setReviews] = useState([])
   const [showReview, setShowReview] = useState(false)
   const [id, setId] = useState(0)
+  const { fetchReview } = api
+
 
   const handleImgError = (event) => {
     if (!retried) {
       setRetried(true)
       const img = event.target;
-      img.src = 'https://res.cloudinary.com/dxayftnxb/image/upload/v1574791542/download_dtr4in.png'
+      img.src = './public/assets/download.png'
     }
   }
 
@@ -32,14 +33,11 @@ const HotelCard = ({
   }
 
   useEffect(() => {
-    fetch(`${API_URL}?hotel_id=${id}`)
-      .then((response) => response.json())
-      .then((response) => {
-        setReviews(response)
-      })
-      .catch((error) => {
-        throw error
-      })
+    fetchReview(id).then((response) => {
+      setReviews(response)
+    }).catch((error) => {
+      throw error
+    })
   }, [id])
 
   return (
@@ -110,8 +108,7 @@ const HotelCard = ({
   )
 }
 
-
-export default memo(HotelCard)
+export default HotelCard
 
 HotelCard.propTypes = {
   image: PropTypes.string.isRequired,

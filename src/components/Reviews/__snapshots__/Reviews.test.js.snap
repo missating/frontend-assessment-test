@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reviews Component should be rendered properly 1`] = `
+<article
+  className="reviews-container"
+>
+  <div
+    className="reviews-container__content"
+  >
+    <h3>
+      Susan Martins
+    </h3>
+    <p>
+      Nice hotel
+    </p>
+    <span>
+      Positive:
+       
+      true
+    </span>
+  </div>
+</article>
+`;

@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 // third party libraries
 import React, { useEffect, useState } from 'react';
 
@@ -7,22 +8,21 @@ import HotelCard from '../HotelCard'
 // styles
 import './HotelList.scss'
 
-const API_URL = 'http://fake-hotel-api.herokuapp.com/api/hotels'
+// others
+import api from '../../api';
 
 const HotelList = () => {
   const [hotels, setHotels] = useState([]);
   const [minStars, setMinStars] = useState(3)
   const [maxPrice, setMaxPrice] = useState(100000)
+  const { fetchHotels } = api
 
   useEffect(() => {
-    fetch(`${API_URL}?count=10&min_stars=${minStars}&max_price=${maxPrice}`)
-      .then((response) => response.json())
-      .then((response) => {
-        setHotels(response)
-      })
-      .catch((error) => {
-        throw error
-      })
+    fetchHotels(minStars, maxPrice).then((allHotels) => {
+      setHotels(allHotels)
+    }).catch((error) => {
+      throw error
+    })
   }, [minStars, maxPrice])
 
 
@@ -45,7 +45,7 @@ const HotelList = () => {
           className="hotellist-container__content-input"
           placeholder="Filter By Price"
           type="number"
-          onBlur={(event) => setMaxPrice(event.target.value)}
+          onChange={(event) => setMaxPrice(event.target.value)}
         />
       </div>
       {

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelCard Component should be rendered properly 1`] = `
+<Fragment>
+  <article
+    className="hotelcard-container"
+  >
+    <div
+      className="hotelcard-container__image"
+    >
+      <img
+        alt="Best Hotel"
+        onError={[Function]}
+        src="exmaple.png"
+      />
+    </div>
+    <div
+      className="hotelcard-container__details"
+    >
+      <div
+        className="hotelcard-container__details-one"
+      >
+        <h2>
+          Best Hotel
+        </h2>
+        <p
+          className="hotelcard-container__details-location"
+        >
+          Lagos
+          ,
+           
+           
+          Nigeria
+        </p>
+        <p
+          className="hotelcard-container__details-description"
+        >
+          Best hotel ever
+        </p>
+        <p
+          className="hotelcard-container__details-date"
+        >
+          Available from
+           
+          Thu Nov 21 2019
+           
+          -
+           
+          Thu Jul 30 2020
+        </p>
+        <starRating
+          totalStars={4}
+        />
+      </div>
+      <div
+        className="hotelcard-container__details-two"
+      >
+        <span>
+          <sup>
+            €
+          </sup>
+          500
+        </span>
+        <button
+          className="hotelcard-container__button"
+          onClick={[Function]}
+          type="button"
+        >
+          Reviews
+        </button>
+      </div>
+    </div>
+  </article>
+  <div
+    className=""
+  />
+</Fragment>
+`;

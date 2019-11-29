@@ -35,7 +35,6 @@ class ErrorBoundary extends React.Component {
             <p>We are working on creating something better...</p>
             <button type="button" onClick={() => window.location.reload()}>Refresh</button>
           </div>
-
         </div>
       )
     }
