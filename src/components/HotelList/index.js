@@ -28,21 +28,24 @@ const HotelList = () => {
   return (
     <div className="hotellist-container">
       <div className="hotellist-container__content">
-        <select
-          className="hotellist-container__content-select"
-          name="select-box"
-          value={minStars}
-          onChange={(event) => setMinStars(event.target.value)}
-        >
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+        <div className="hotellist-container__content-select-box">
+          <select
+            name="select-box"
+            value={minStars}
+            onChange={(event) => setMinStars(event.target.value)}
+          >
+            <option value="0">Hotel Stars</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
         <input
           className="hotellist-container__content-input"
-          placeholder="Filter By Price"
+          placeholder="Hotel Price"
           type="number"
           onChange={(event) => setMaxPrice(event.target.value)}
         />
