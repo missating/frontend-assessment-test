@@ -23,6 +23,14 @@ Optional: Did you miss something in our hotel API? Something that is really need
 - Pagination: Since is possible for the API to return 500 hotels, pagination is important for better handling of response data the front end
 - Error documentationn: I think errors shouldn't be passed from the front end as query parameters, errors should come from the backend with a descriptive message so it can be handled properly on the front end.
 
+## Test
+____
+
+Run the application test:
+
+`npm run test`
+
+
 ### The Flight
 
 To be able to show a list of flights where people can search for flights to their various hotels we would be needing the following:
